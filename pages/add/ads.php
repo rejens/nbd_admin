@@ -5,7 +5,7 @@ include "../includes/header.php";
 
 <div class="card card-primary mx-auto my-5 w-50">
     <div class="card-header">
-        <h3 class="card-title">Add News</h3>
+        <h3 class="card-title">Add Ad</h3>
     </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -15,13 +15,13 @@ include "../includes/header.php";
                 <input type="text" name="title" id="title" class="form-control" placeholder="Title">
                 <label for="title">Title</label>
             </div>
-            <div class="form-floating m-2">
-                <textarea class="form-control" placeholder="Leave a comment here" name="description" id="description"></textarea>
-                <label for="description">Description</label>
+            <div class="mb-3 form-control m-2">
+                <label for="formFile" class="form-label">insert photo</label>
+                <input class="form-control" name="img" type="file" id="formFile">
             </div>
-            <div class="form-control m-2">
-                <label for="formFile" class="form-label">image</label>
-                <input class="form-control" type="file" id="formFile" name="img">
+            <div class="form-floating m-2">
+                <input type="date" name="date" id="date" class="form-control" placeholder="date">
+                <label for="date">date</label>
             </div>
 
 
@@ -39,32 +39,28 @@ include "../includes/header.php";
 <?php
 
 if (isset($_POST['submit'])) {
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-
     $img = $_FILES['img'];
     $name = $img['name'];
     $tempName = $img['tmp_name'];
     $name = uniqid();
-    $fileName = "upload/$name.jpg";
-    $fileDestination = "../../$fileName";
+    $fileDestination = "upload/$name.jpg";
 
     $title = $_POST['title'];
-    $date = date("Y-m-d");
-    $description = $_POST['description'];
+    $date = $_POST['date'];
 
-    move_uploaded_file($tempName, $fileDestination);
-
-    $sql = "insert into n_b_d_news (ntitle,ndate,nimg,ndescription) values ('$title','$date','$fileName','$description')";
-    if ($conn->query($sql)) {
-        echo "<script> location.replace('../news.php') </script>";
+    move_uploaded_file($tempName, "../../" . $fileDestination);
+    $sql = "insert into n_b_d_ads(`a_title`, `a_date`, `a_image`) values ('$title','$date','$fileDestination')";
+    $res = mysqli_query($conn, $sql);
+    if ($res) {
+        echo "<script> location.replace('../ads.php') </script>";
     } else {
-        echo "sorry could not add news";
+        echo "sorry could not add ads details to database";
     }
 }
 
 if (isset($_POST['cancel'])) {
-    echo "<script> location.replace('../news.php') </script>";
+    echo "<script> location.replace('../ads.php') </script>";
 }
+
 
 ?>

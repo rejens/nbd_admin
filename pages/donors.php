@@ -60,7 +60,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 
                                             ?>
                                                 <tr>
-                                                    <td> <a href="delete/request.php?id=<?php echo $row['S_No'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
+                                                    <td> <a href="delete/donors.php?id=<?php echo $row['S_No'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
                                                     </td>
                                                     <td><?php echo $row['donor_id'] ?></td>
                                                     <td><?php echo $row['dname'] ?></td>

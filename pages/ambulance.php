@@ -55,7 +55,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                             <?php foreach ($rows as $row) {
                                             ?>
                                                 <tr>
-                                                    <td> <a href="delete/ambulance.php?php echo $row['s_no'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a></td>
+                                                    <td> <a href="delete/ambulance.php?id=<?php echo $row['s_no'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a></td>
                                                     <td><?php echo $row['aname'] ?></td>
                                                     <td><?php echo $row['aprovince'] ?></td>
                                                     <td><?php echo $row['adistrict'] ?></td>

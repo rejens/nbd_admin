@@ -29,27 +29,35 @@ if (empty($_SESSION['user'])) {
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 
+  <!-- custom css -->
+  <link rel="stylesheet" href="../dist/css/custom.css">
+
+
+  <link rel="stylesheet" href="../plugins/jquery-ui/jquery-ui.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-  <style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/4.1.0/css/fixedColumns.bootstrap.css">
+  <!-- <style>
     .tbl-fixed {
       overflow-x: scroll;
       overflow-y: scroll;
     }
-
 
     .tbl-container {
       max-width: 100%;
       max-height: 100%;
     }
 
-    table th,
-    table td {
-      margin: 10px;
-      /* Apply cell padding */
+    table {
+      max-width: 100%;
+      max-height: 500px;
     }
-  </style>
+  </style> -->
   <script>
     if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);

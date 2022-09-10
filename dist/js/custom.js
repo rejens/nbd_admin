@@ -18,3 +18,7 @@
   }
 
   getCurrentUrl();
+
+
+  //data tables
+

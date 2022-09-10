@@ -40,19 +40,21 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                     <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
                                         <thead>
                                             <tr>
-                                                <th>actions</th>
-                                                <th>Bank Name</th>
-                                                <th>District</th>
-                                                <th>Address</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
+                                                <th style="min-width:110px;">actions</th>
+                                                <th style="min-width:110px;">Bank Name</th>
+                                                <th style="min-width:110px;">District</th>
+                                                <th style="min-width:110px;">Address</th>
+                                                <th style="min-width:110px;">Email</th>
+                                                <th style="min-width:110px;">Phone</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php foreach ($rows as $row) {
                                             ?>
                                                 <tr>
-                                                    <td> <a href="delete.php?id=<?php echo $row['donor_id'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a></td>
+                                                    <td> <a href="edit/bloodBank.php?id=<?php echo $row['S_No'] ?>"><button class="btn btn-secondary"><i class="ion ion-edit"></i></button></a>
+                                                        <a href="delete/bloodBank.php?id=<?php echo $row['S_No'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
+                                                    </td>
                                                     <td><?php echo $row['bname'] ?></td>
                                                     <td><?php echo $row['bdistrict'] ?></td>
                                                     <td><?php echo $row['baddress'] ?></td>

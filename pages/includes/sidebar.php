@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="../index3.html" class="brand-link">
-    <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+  <a href="dashboard.php" class="brand-link">
+    <img src="../dist/img/logo_png.png" style="background-color: #fff;" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-light">NBD admin </span>
   </a>
 
@@ -104,6 +104,14 @@
             <i class="nav-icon fas fa-comments"></i>
             <p>
               Feedback
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="ads.php" class="nav-link" id="ads">
+            <i class="nav-icon fas fa-money-bill"></i>
+            <p>
+              Ads
             </p>
           </a>
         </li>

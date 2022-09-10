@@ -36,10 +36,10 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                         <div class="card-body">
                             <div class="container tbl-container">
                                 <div class="tbl-fixed">
-                                    <table id="example2" class="table table-bordered table-hover" style="overflow-x:scroll; overflow-y:scroll">
+                                    <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
                                         <thead>
                                             <tr>
-                                                <th style="min-width:100px;">Actions</th>
+                                                <th style="min-width:70px;">Actions</th>
                                                 <th style="min-width:140px;">Donor's Name</th>
                                                 <th style="min-width:140px;">Patient's Name</th>
                                                 <th style="min-width:100px;">Province</th>

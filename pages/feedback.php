@@ -40,19 +40,19 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                     <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
                                         <thead>
                                             <tr>
-                                                <th>actions</th>
-                                                <th>Name</th>
-                                                <th>Address</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Message</th>
+                                                 <th style="min-width:110px;">actions</th>
+                                                 <th style="min-width:110px;">Name</th>
+                                                 <th style="min-width:110px;">Address</th>
+                                                 <th style="min-width:110px;">Email</th>
+                                                 <th style="min-width:110px;">Phone</th>
+                                                 <th style="min-width:110px;">Message</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php foreach ($rows as $row) {
                                             ?>
                                                 <tr>
-                                                    <td> <a href="delete.php?id=<?php echo $row['donor_id'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a></td>
+                                                    <td> <a href="delete/feedback.php?id=<?php echo $row['S_No'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a></td>
                                                     <td><?php echo $row['mname'] ?></td>
                                                     <td><?php echo $row['maddress'] ?></td>
                                                     <td><?php echo $row['memail'] ?></td>

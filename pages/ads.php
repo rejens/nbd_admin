@@ -38,7 +38,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                             <div class="container tbl-container">
                                 <div class="tbl-fixed">
                                     <div class="d-flex justify-content-end m-2">
-                                        <a href="add/ambulance.php"> <button type="submit" class="btn btn-primary">add</button></a>
+                                        <a href="add/ads.php"> <button type="submit" class="btn btn-primary">add</button></a>
                                     </div>
                                     <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
                                         <thead>
@@ -53,16 +53,13 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                             <?php foreach ($rows as $row) {
                                             ?>
                                                 <tr>
-                                                    <td> <a href="edit/ambulance.php?id=<?php echo $row['s_no'] ?>"> <button type="submit" class="btn btn-primary"><i class="ion ion-edit"></i></button></a>
-                                                        <a href="delete/ambulance.php?id=<?php echo $row['s_no'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
+                                                    <td> <a href="edit/ads.php?id=<?php echo $row['a_id'] ?>"> <button type="submit" class="btn btn-primary"><i class="ion ion-edit"></i></button></a>
+                                                        <a href="delete/ads.php?id=<?php echo $row['a_id'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
                                                     </td>
-                                                    <td><?php echo $row['aname'] ?></td>
-                                                    <td><?php echo $row['aprovince'] ?></td>
-                                                    <td><?php echo $row['adistrict'] ?></td>
-                                                    <td><?php echo $row['avillage'] ?></td>
-                                                    <td><?php echo $row['aperson'] ?></td>
-                                                    <td><?php echo $row['ambulancenum'] ?></td>
-                                                    <td><?php echo $row['aphone'] ?></td>
+                                                    <td><?php echo $row['a_title'] ?></td>
+                                                    <td><a href="../<?php echo $row['a_image'] ?>"> <img height="50" width="55" src="../<?php echo $row['a_image'] ?>" alt=""> </a>
+                                                    <td><?php echo $row['a_date'] ?></td>
+
                                                 </tr>
                                             <?php } ?>
 

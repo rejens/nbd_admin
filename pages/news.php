@@ -35,24 +35,28 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <div class="d-flex justify-content-end m-2">
+                                <a href="add/news.php"> <button type="submit" class="btn btn-primary">add</button></a>
+                            </div>
                             <div class="container tbl-container">
                                 <div class="tbl-fixed">
-                                    <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
+                                    <table id="example2" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>actions</th>
-                                                <th>Title</th>
-                                                <th>Date</th>
-                                                <th>Img</th>
-                                                <th>Description</th>
+                                                <th style="min-width:80px;">actions</th>
+                                                <th style="min-width:130px;">Title</th>
+                                                <th style="min-width:100px;">Date</th>
+                                                <th style="min-width:110px;">Img</th>
+                                                <th style="min-width:110px;">Description</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php foreach ($rows as $row) {
                                             ?>
                                                 <tr>
-                                                    <td> <a href="delete/news.php?id=<?php echo $row['s_no'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
+                                                    <td>
                                                         <a href="edit/news.php?id=<?php echo $row['s_no'] ?>"><button class="btn btn-secondary"><i class="ion ion-edit"></i></button></a>
+                                                        <a href="delete/news.php?id=<?php echo $row['s_no'] ?>"><button class="btn btn-danger"><i class="ion ion-trash-b"></i></button></a>
                                                     </td>
                                                     <td><?php echo $row['ntitle'] ?></td>
                                                     <td><?php echo $row['ndate'] ?></td>

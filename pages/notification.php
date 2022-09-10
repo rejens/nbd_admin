@@ -35,19 +35,19 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <div class="d-flex justify-content-end m-2">
+                                <a href="add/notification.php"> <button type="submit" class="btn btn-primary">add</button></a>
+                            </div>
                             <div class="container tbl-container">
-                                <div class="d-flex justify-content-end m-2">
-                                    <a href="add/notification.php"> <button type="submit" class="btn btn-primary">add</button></a>
-                                </div>
                                 <div class="tbl-fixed">
-                                    <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
+                                    <table id="example2" class="table table-bordered table-hover ">
                                         <thead>
                                             <tr>
-                                                <th>Actions</th>
-                                                <th>Title</th>
-                                                <th>Description</th>
-                                                <th>Image</th>
-                                                <th>Date</th>
+                                                <th style="min-width:110px;">Actions</th>
+                                                <th style="min-width:110px;">Title</th>
+                                                <th style="min-width:110px;">Description</th>
+                                                <th style="min-width:110px;">Image</th>
+                                                <th style="min-width:110px;">Date</th>
 
 
                                             </tr>
