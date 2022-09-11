@@ -40,7 +40,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                     <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">
                                         <thead>
                                             <tr>
-                                                <th style="min-width:110px;">actions</th>
+                                                <th style="min-width:50px;">actions</th>
                                                 <th style="min-width:130px;">Name</th>
                                                 <th style="min-width:100px;">Provience</th>
                                                 <th style="min-width:120px;">District</th>

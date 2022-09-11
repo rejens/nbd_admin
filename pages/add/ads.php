@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
     $name = $img['name'];
     $tempName = $img['tmp_name'];
     $name = uniqid();
-    $fileDestination = "upload/$name.jpg";
+    $fileDestination = "upload/ads/$name.jpg";
 
     $title = $_POST['title'];
     $date = $_POST['date'];

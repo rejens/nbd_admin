@@ -43,7 +43,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                     <table id="example2" class="table table-bordered table-hover ">
                                         <thead>
                                             <tr>
-                                                <th style="min-width:110px;">Actions</th>
+                                                <th style="min-width:50px;">Actions</th>
                                                 <th style="min-width:110px;">Title</th>
                                                 <th style="min-width:110px;">Description</th>
                                                 <th style="min-width:110px;">Image</th>

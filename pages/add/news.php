@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     $name = $img['name'];
     $tempName = $img['tmp_name'];
     $name = uniqid();
-    $fileName = "upload/$name.jpg";
+    $fileName = "upload/news/$name.jpg";
     $fileDestination = "../../$fileName";
 
     $title = $_POST['title'];

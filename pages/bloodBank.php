@@ -35,6 +35,9 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <div class="d-flex justify-content-end m-2">
+                                <a href="add/bloodBank.php"> <button type="submit" class="btn btn-primary">add</button></a>
+                            </div>
                             <div class="container tbl-container">
                                 <div class="tbl-fixed">
                                     <table id="example2" class="table table-bordered table-hover " style="overflow-x:scroll; overflow-y:scroll">

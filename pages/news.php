@@ -46,7 +46,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
                                                 <th style="min-width:80px;">actions</th>
                                                 <th style="min-width:130px;">Title</th>
                                                 <th style="min-width:100px;">Date</th>
-                                                <th style="min-width:110px;">Img</th>
+                                                <th style="min-width:50px;">Img</th>
                                                 <th style="min-width:110px;">Description</th>
                                             </tr>
                                         </thead>
